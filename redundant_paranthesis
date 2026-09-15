@@ -1,0 +1,19 @@
+strin=input()
+li=list(strin)
+stack=[]
+size=len(li)
+for i in range(size):
+    if li[i]==")":
+        operator=False
+        while stack and stack[-1]!="(":
+            top=stack.pop()
+            if top in ['+','-','*','/','^']:
+                operator=True
+        stack.pop()
+        if not operator:
+            print("redundant expression")
+            break
+    else:
+        stack.append(li[i])
+else:
+    print("not redundant")
