@@ -1,0 +1,11 @@
+li=list(map(int,input("enter numbers:").split()))
+stack1=[]
+stack2=[]
+for ele in li:
+    stack1.append(ele)
+while stack1:
+    stack2.append(stack1.pop())
+while stack2:
+    result=stack2.pop()
+    print(result,end=" ")
+
