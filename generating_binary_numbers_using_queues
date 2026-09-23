@@ -1,0 +1,10 @@
+num=int(input())
+count=0
+queue=['1']
+while count<num:
+    x=queue.pop(0)
+    print(x)
+    queue.append(x+"0")
+    queue.append(x+"1")
+    count+=1    
+    
