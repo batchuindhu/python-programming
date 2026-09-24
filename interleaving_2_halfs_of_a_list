@@ -1,0 +1,15 @@
+li=list(map(int,input("enter elements").split()))
+size=len(li)//2
+result=[]
+q1=li[:size]
+q2=li[size:]
+while q1:
+    ele1=q1.pop(0)
+    ele2=q2.pop(0)
+    result.append(ele1)
+    result.append(ele2)
+result.extend(q1)
+result.extend(q2)
+
+print(result)    
+
