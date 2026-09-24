@@ -1,0 +1,15 @@
+li=list(map(int,input("enter the elements").split()))
+result=[]
+stack=[]
+queue=li[:]
+for i in queue:
+    if i%2==0:
+        stack.append(i)
+while queue:
+    ele=queue.pop(0)
+    if ele%2==0:
+        result.append(stack.pop())
+    else:
+        result.append(ele)
+print(*result)
+    
